@@ -1,8 +1,8 @@
 <?php
 namespace App\Users;
 
-use Funct;
-use Funct\Strings;
+//use Funct;
+//use Funct\Strings;
 
 use function Funct\Collection\firstN;
 
@@ -17,11 +17,16 @@ $users = [
 function takeOldest($array, $num = 1) {   
     $help = fn($a, $b) => $a['birthday'] <=> $b['birthday'];
     usort($array, $help);
-    print_r($array);
+    $shortArray = [];
+    for ($i = 0; $i <$num; $i++) {
+        $shortArray[] = $array[$i];
+    }
+    print_r($shortArray);
 }
 
-// takeOldest($users);
-// echo firstN([1, 2, 3]);
+//takeOldest($users);
 
-echo Funct\firstValue(null, null, 'foo_bar'); // => 'foo_bar'
+echo firstN([1, 2, 3]);
+
+//echo Funct\firstValue(null, null, 'foo_bar'); // => 'foo_bar'
 ?>
