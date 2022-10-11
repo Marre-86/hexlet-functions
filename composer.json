@@ -1,0 +1,18 @@
+{
+    "name": "marre/hexlet-functions",
+    "type": "study-project",
+    "autoload": {
+        "psr-4": {
+            "Marre\\HexletFunctions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artem Pokhiliuk",
+            "email": "timtimoha@yandex.ru"
+        }
+    ],
+    "require": {
+        "funct/funct": "^1.5"
+    }
+}
